@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain SWE Wiki"
+  short_description: "Build and query a persistent SWE wiki"
+  default_prompt: "Use $maintain-swe-wiki to ingest, query, or maintain my software engineering knowledge wiki."
