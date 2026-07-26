@@ -1,15 +1,35 @@
 # SWE Wiki Index
 
-Read this catalog before opening topic pages. Keep entries alphabetical within each section.
+Content catalog. Read this before querying pages.
 
 ## Sources
 
+_None yet._
+
 ## Concepts
 
-## Technologies
+_None yet._
 
-## Patterns
+## Decisions
 
-## Projects
+_None yet._
 
-## Syntheses
+## Blueprints
+
+_None yet._
+
+## Practices
+
+_None yet._
+
+## Conventions
+
+_None yet._
+
+## Systems
+
+_None yet._
+
+## Questions
+
+_None yet._
