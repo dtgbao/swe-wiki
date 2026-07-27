@@ -13,3 +13,7 @@ Append completed ingest, query, and lint operations below. Do not rewrite or reo
 ## [2026-07-27 10:14] lint | Post-ingest validation: Practical multi-agent orchestration in Codex
 - Notes: Mechanical lint passed. Semantic review found no contradictions, stale claims, orphaned durable pages, missing cross-links, weak provenance, or missing architecture diagrams.
 - Follow-ups: Revalidate product-specific model and concurrency details when newer Codex sources are ingested.
+
+## [2026-07-27 13:24] lint | Root documentation validation
+- Changed: README.md, AGENTS.md, wiki/log.md
+- Notes: Documented the human entry point, knowledge model, repository layout, agent invariants, and workflow completion gates. Mechanical lint passed; semantic review found no contradictions or schema drift.
