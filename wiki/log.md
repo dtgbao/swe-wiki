@@ -97,3 +97,23 @@ Append completed ingest, query, and lint operations below. Do not rewrite or reo
 - Changed: wiki/log.md
 - Notes: Mechanical lint passed. Semantic review found no unresolved contradictions, stale unbounded claims, orphaned durable pages, broken provenance, vague index summaries, missing cross-links, or missing useful diagrams; AWS-operated service controls and customer-owned IAM outcomes are separated, and compliance, vulnerability management, MFA, monitoring, and credential rotation are qualified by layer and credential type.
 - Follow-ups: Apply the responsibility matrix to later AWS service lessons, add control ownership and evidence requirements, distinguish access keys from cryptographic and protocol keys, and resolve the transcript CCP-versus-DVA exam-context note.
+
+## [2026-07-30 15:39] ingest | EC2 Instance Types Basics
+- Changed: raw/2026-07-30-ec2-instance-types-basics.txt, raw/2026-07-30-ec2-instance-types-overview-slide.png, raw/2026-07-30-ec2-instance-types-general-purpose-slide.png, raw/2026-07-30-ec2-instance-types-compute-optimized-slide.png, raw/2026-07-30-ec2-instance-types-memory-optimized-slide.png, raw/2026-07-30-ec2-instance-types-storage-optimized-slide.png, wiki/sources/2026-07-30-ec2-instance-types-basics.md, wiki/systems/amazon-ec2-instance-types.md, wiki/index.md, wiki/log.md
+- Notes: Preserved the transcript and five slides; captured instance-type naming, workload categories, selection criteria, performance and storage boundaries, and corrected the course-era r5.16xlarge and c5d.4xlarge examples against current AWS documentation.
+- Follow-ups: Revalidate the AWS catalog, specifications, regional availability, pricing, and Free Tier terms when deploying; ingest later lessons on EBS versus instance store, accelerated computing, HPC, benchmarking, and right-sizing.
+
+## [2026-07-30 15:39] lint | Post-ingest validation: EC2 Instance Types Basics
+- Changed: wiki/log.md
+- Notes: Mechanical lint passed. Semantic review found no near-duplicate EC2 page, orphaned durable page, broken provenance, vague index summary, missing cross-link, or unresolved contradiction; mutable category, family, specification, Free Tier, pricing, and third-party comparison claims are explicitly bounded by current AWS documentation.
+- Follow-ups: Revalidate mutable AWS facts before production use and extend the page with later course material on storage durability, accelerators, HPC, workload benchmarks, and utilization-based right-sizing.
+
+## [2026-07-30 16:04] ingest | Security Groups and Classic Ports Overview
+- Changed: raw/2026-07-30-security-groups-and-classic-ports-overview.txt, raw/2026-07-30-security-groups-introduction-slide.png, raw/2026-07-30-security-groups-deeper-dive-slide.png, raw/2026-07-30-security-groups-traffic-diagram-slide.png, raw/2026-07-30-security-groups-good-to-know-slide.png, raw/2026-07-30-security-group-references-diagram-slide.png, raw/2026-07-30-classic-ports-slide.png, wiki/sources/2026-07-30-security-groups-and-classic-ports-overview.md, wiki/systems/amazon-vpc-security-groups.md, wiki/index.md, wiki/log.md
+- Notes: Preserved the transcript and six slides; captured stateful allow-list evaluation, ENI attachment and additive rules, custom versus default group behavior, security-group references, current same-Region VPC associations, least-privilege administration, port caveats, and evidence-based connectivity troubleshooting.
+- Follow-ups: Validate the upcoming hands-on, VPC, and load-balancer lessons against network ACLs, restricted management access, group-reference topology, IPv6, egress control, VPC Flow Logs, Reachability Analyzer, quotas, and connection tracking.
+
+## [2026-07-30 16:04] lint | Post-ingest validation: Security Groups and Classic Ports Overview
+- Changed: wiki/log.md
+- Notes: Mechanical lint passed. Semantic review found no near-duplicate security-group page, orphaned durable page, broken provenance, vague index summary, missing cross-link, or unresolved contradiction; statefulness, default-group behavior, additive attachment, VPC associations, reference semantics, diagnostic uncertainty, and classic-port limitations are explicitly recorded.
+- Follow-ups: Extend the page with later course evidence for VPC routing and network ACLs, load-balancer tiering, private administration, IPv6 exposure, egress policy, flow logging, reachability analysis, and hands-on verification.
