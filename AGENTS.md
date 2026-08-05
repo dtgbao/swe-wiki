@@ -9,7 +9,11 @@ maintained data, not disposable notes.
 - `raw/` is immutable source material.
 - `wiki/` is the synthesis layer. Cite source URLs, raw paths, or source pages.
 - Update an existing durable page before creating a near-duplicate.
-- Keep `wiki/index.md` complete, concrete, and organized by page kind.
+- File each page and its raw material under one primary lowercase domain such
+  as `aws/iam`; use tags and cross-links for secondary domains.
+- Keep page kind in frontmatter rather than in kind-based directories.
+- Maintain an `index.md` in every knowledge directory. The root index lists
+  top-level domains; nested indexes list immediate subdomains and local pages.
 - Keep `wiki/log.md` append-only. Valid events are `bootstrap`, `ingest`,
   `query`, and `lint`; Git history records syncs.
 - Use stable relative Markdown links.
@@ -23,6 +27,7 @@ Every page under `wiki/` except `index.md` and `log.md` requires:
 ---
 title: "Readable title"
 kind: concept
+domain: aws/iam
 status: draft
 tags: [swe]
 sources: []
@@ -43,10 +48,13 @@ Allowed `status` values: `draft`, `evergreen`, `superseded`. Allowed
 
 - The entire source, including code, diagrams, tables, footnotes, and available
   local images, was read.
+- A primary domain was recommended and explicitly approved before any ingest
+  mutation.
 - Its source page has provenance, summary, extracted SWE atoms, impacted pages,
   and open questions.
 - Reusable knowledge was merged into the correct durable pages.
-- Every changed page appears in `wiki/index.md`.
+- Every changed page appears in its local index and ancestor indexes reach the
+  domain.
 - Contradictions or superseded claims are recorded.
 - A parseable `ingest` entry was appended to `wiki/log.md`.
 
@@ -56,14 +64,15 @@ Allowed `status` values: `draft`, `evergreen`, `superseded`. Allowed
 - Prefer synthesized pages; use raw sources when the wiki points to them or is
   insufficient.
 - Cite wiki paths in the answer.
-- Save independently useful synthesis under `wiki/questions/`, update the
-  index, and append a `query` log entry.
+- Save independently useful synthesis in its owning domain with
+  `kind: question`, rebuild its indexes, and append a `query` log entry.
 
 ### Lint
 
 - Mechanical lint passes or every remaining error is reported.
 - Semantic review covers contradictions, staleness, orphans, missing pages,
-  provenance, cross-links, index summaries, and architecture diagrams.
+  provenance, domain/path agreement, cross-links, local indexes, and
+  architecture diagrams.
 - Fix in-scope drift and append a parseable `lint` log entry.
 
 ### Sync
